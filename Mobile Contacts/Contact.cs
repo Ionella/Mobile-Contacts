@@ -32,33 +32,33 @@ namespace Mobile_Contacts
 
             public static Person AddContact()
             { 
-            Person personobj = new Person();
+            Person person = new Person();
                
             Console.WriteLine("Enter the First Name of the person:");
-            personobj.firstName = Console.ReadLine();
+            person.firstName = Console.ReadLine();
 
             Console.WriteLine("Enter the Last Name of the person:");
-            personobj.lastName = Console.ReadLine();
+            person.lastName = Console.ReadLine();
 
             Console.WriteLine("Enter the Phon Number of the person:");
-            personobj.number = Console.ReadLine();
+            person.number = Console.ReadLine();
 
             Console.WriteLine("Enter the Status of the person: 1-active/ 0-inactive");
             int chose = int.Parse(Console.ReadLine());
                 if ( chose == 0 )
                 {
-                    personobj.status = StatusContact.inactive;
+                    person.status = StatusContact.inactive;
                 }
                 else if ( chose == 1 ) 
                 {
-                    personobj.status = StatusContact.active;
+                    person.status = StatusContact.active;
                 }
                 else
                 {
                     Console.WriteLine("Invalide chose.");
                 }
 
-                return personobj;   
+                return person;   
             } 
         }
     }
